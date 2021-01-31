@@ -1,0 +1,72 @@
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+.card-title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #204872;
+    font-weight: 600;
+  }
+  
+
+.card-body {
+  padding: 2rem;
+}
+
+body {
+    background: #56CCF2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.submit-btn {
+  padding: 5px;
+  width: 50%;
+  border-radius: 10px;
+  border: 2px solid #204872;
+  background-color: #b9d5f1;
+  color: black;
+  height: 40px;
+  margin-top: 10px;
+  width: 50%;
+  box-shadow: none;
+}
+
+.submit-btn:hover {
+  background-color: white;
+  border: 2px solid #204872;
+}
+
+.style-input-field {
+  padding: 10px;
+  border: 2px solid royalblue;
+  border-radius: 5px;
+  margin: 8px;
+}
+
+.style-input-field:focus {
+  box-shadow: none;
+  border: 2px solid #204872;
+}
+
+.style-dropdown {
+  padding: 10px;
+  border: 2px solid royalblue;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.style-dropdown:focus {
+  box-shadow: none;
+  border: 2px solid #204872;
+}

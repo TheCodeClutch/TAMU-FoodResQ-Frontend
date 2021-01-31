@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Signup</title>
+    <!-- Bootstrap CDN -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/login.css" />
+    <link rel="stylesheet" href="/styles/navbar.css" />
+    <script>
+        function purple(event) {
+            event.target.style.borderColor = "#961e47";
+            event.target.style.borderWidth = "2px";
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <style>
+        body {
+            background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light stylish-navbar"
+        style="border:2px solid #9598CD; background-color: white; border-radius: 50px; padding-top: 15px; padding-bottom: 15px; box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.JPEG" alt="food-donation-app-logo" style="height: 50px; width: 150px;"
+                alt="Pragati" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item dropdown" style="padding-left: 20px; padding-right: 20px">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-item" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #204872">
+                        <span class="fa fa-user" style="font-size: 25px;"></span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="">Your Profile</a>
+                        <a class="dropdown-item" href="" onclick="logout(event);">Logout</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+    <!-- End of Navbar -->
+
+    <div class="container-fluid register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+                <h3>Welcome</h3>
+                <p>You are 30 seconds away from doing a good deed!</p>
+                <p><a style="color:white; font-weight: bolder;" href="login.html">Already have an account? Login
+                        here!</a></p>
+
+            </div>
+            <div class="col-md-9 register-right">
+                <div class="row text-center">
+                    <div class="col-md-7">
+                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                    aria-controls="home" aria-selected="true">Restaurant</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                    aria-controls="profile" aria-selected="false">User</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                        <h3 class="signup-register-heading">Signup as a Restaurant</h3>
+                        <div class="row signup-register-form">
+                            <div class="col-md-6">
+                                <div class="form-group form-label-group">
+                                    <input type="text" class="form-control" placeholder="Name *" value="" id="name" />
+                                    <label id="label-name" for="name">Name</label>
+                                </div>
+
+                                <div class="form-group form-label-group">
+                                    <input type="text" minlength="10" maxlength="10" name="Phone" class="form-control"
+                                        placeholder="Your Phone *" value="" id="phone" />
+                                    <label id="label-phone" for="phone">Phone</label>
+                                </div>
+
+                                <div class="form-group form-label-group">
+                                    <input type="hidden" class="form-control" name="opening-time">
+                                    <select id="opening-time">
+                                        <option class="hidden" selected disabled>Opening Time
+                                        </option>
+                                        <option>1 AM</option>
+                                        <option>2 AM</option>
+                                        <option>3 AM</option>
+                                        <option>4 AM</option>
+                                        <option>5 AM</option>
+                                        <option>6 AM</option>
+                                        <option>7 AM</option>
+                                        <option>8 AM</option>
+                                        <option>9 AM</option>
+                                        <option>10 AM</option>
+                                        <option>11 AM</option>
+                                        <option>12 PM</option>
+                                    </select>
+                                </div>
+                                <div class="form-group form-label-group">
+                                    <input type="text" class="form-control" placeholder="Locality *" value=""
+                                        id="locality" />
+                                    <label id="label-locality" for="locality">Locality</label>
+                                </div>
+                                <div class="form-group form-label-group">
+                                    <input type="text" class="form-control" placeholder="State *" value="" id="state" />
+                                    <label id="label-state" for="state">State</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-label-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" value=""
+                                        id="email" />
+                                    <label id="label-email" for="email">Email</label>
+                                </div>
+                                <div class="form-group form-label-group">
+                                    <input type="password" class="form-control" placeholder="Password *" value=""
+                                        id="password" />
+                                    <label id="label-password" for="password">Password</label>
+                                </div>
+                                <div class="form-group form-label-group">
+                                    <input type="hidden" class="form-control" name="closing-time">
+                                    <select id="closing-time">
+                                        <option class="hidden" selected disabled>Closing Time</option>
+
+                                        <option>1 PM</option>
+                                        <option>2 PM</option>
+                                        <option>3 PM</option>
+                                        <option>4 PM</option>
+                                        <option>5 PM</option>
+                                        <option>6 PM</option>
+                                        <option>7 PM</option>
+                                        <option>8 PM</option>
+                                        <option>9 PM</option>
+                                        <option>10 PM</option>
+                                        <option>11 PM</option>
+                                        <option>12 AM</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group form-label-group">
+                                    <input type="text" class="form-control" placeholder="City *" value="" id="city" />
+                                    <label id="label-city" for="city">City</label>
+                                </div>
+                                <div class="form-group form-label-group">
+                                    <input type="text" class="form-control" placeholder="Country *" value=""
+                                        id="country" />
+                                    <label id="label-country" for="country">Country</label>
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-12 col-md-6 offset-md-3 text-center">
+                                <input type="button" class="btn btn-large" value="Signup" id="rest-btn" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User-->
+
+                    <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <h3 class="signup-register-heading">Signup as a User</h3>
+
+                        <div class="row signup-register-form">
+                            <div class="col-md-6">
+                                <div class="form-group form-label-group">
+                                    <input type="text" class="form-control" placeholder="Name *" value=""
+                                        id="user-name" />
+                                    <label id="label-user-name" for="user-name">Name</label>
+
+
+                                </div>
+                                <div class="form-group form-label-group">
+                                    <input type="text" minlength="10" maxlength="10" name="Phone" class="form-control"
+                                        placeholder="Your Phone *" value="" id="user-phone" />
+                                    <label id="label-user-phone" for="user-phone">Phone</label>
+                                </div>
+
+
+                                <div class="form-group form-label-group">
+                                    <input type="text" class="form-control" placeholder="Locality *" value=""
+                                        id="user-locality" />
+                                    <label id="label-user-locality" for="user-locality">Locality</label>
+                                </div>
+                                <div class="form-group form-label-group">
+                                    <input type="text" class="form-control" placeholder="State *" value=""
+                                        id="user-state" />
+                                    <label id="label-user-state" for="user-state">State</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-label-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" value=""
+                                        id="user-email" />
+                                    <label id="label-user-email" for="user-email">Email</label>
+                                </div>
+                                <div class="form-group form-label-group">
+                                    <input type="password" class="form-control" placeholder="Password *" value=""
+                                        id="user-password" />
+                                    <label id="label-user-password" for="user-password">Password</label>
+                                </div>
+
+                                <div class="form-group form-label-group">
+                                    <input type="text" class="form-control" placeholder="City *" value=""
+                                        id="user-city" />
+                                    <label id="label-user-city" for="user-city">City</label>
+                                </div>
+                                <div class="form-group form-label-group">
+                                    <input type="text" class="form-control" placeholder="Country *" value=""
+                                        id="user-country" />
+                                    <label id="label-user-country" for="user-country">Country</label>
+                                </div>
+
+                            </div>
+                            <div class="form-label-group col-12 col-md-4 offset-md-4 text-center">
+                                <input type="file" id="user-profile" placeholder="Profile Picture" required
+                                    style="display: none;" />
+                                <input type="button" id="user-upload-btn" class="form-control" value="Choose File"
+                                    style="width: 100%; background-color: white; "
+                                    onclick="document.getElementById('user-profile').click();" />
+                                <label id="labelUserProfile" for="user-profile">Profile Picture</label>
+                            </div>
+
+
+                            <div class="col-12 col-md-6 offset-md-3 text-center">
+                                <input type="button" class="btn btn-large" value="Signup" id="user-btn" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./javascript/signup.js"></script>
+
+</body>
+
+</html>

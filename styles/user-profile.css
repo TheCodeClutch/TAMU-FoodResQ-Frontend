@@ -1,0 +1,31 @@
+#userprofile-yes {
+    border: 2px solid #9983E7;
+    background-color: #9983E7;
+    padding: 5px; 
+    border-radius: 5px;
+    width: 50%;
+    color: white;
+}
+
+#userprofile-yes:hover {
+    border: 2px solid #9983E7;
+    background-color: white;
+    color: black;
+    
+}
+
+
+#userprofile-no {
+    border: 2px solid #9983E7;
+    background-color: #9983E7;
+    padding: 5px; 
+    border-radius: 5px;
+    width: 50%;
+    color: white;
+}
+
+#userprofile-no:hover {
+    border: 2px solid #9983E7;
+    background-color: white;
+    color: black;
+}
