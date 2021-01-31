@@ -122,12 +122,12 @@
   
   #features .features-img {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 5px;
   }
   
   @media (min-width: 769px) {
     #features .features-img {
-      padding-top: 120px;
+      padding-top: 80px;
       margin-top: -200px;
     }
   }
@@ -244,7 +244,8 @@
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 20px;
-    color: #151515;
+    color: white;
+    
   }
   
   .team .member .member-info span {
