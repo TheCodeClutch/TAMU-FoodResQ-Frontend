@@ -1,4 +1,7 @@
-# TAMU-FoodResQ
+<p align="center">
+<img width="450" height="200" src="https://github.com/TheCodeClutch/TAMU-FoodResQ-Frontend/blob/master/images/logo.jpeg">
+</p>
+
 
 ## Inspiration
 An approximate estimation of 1.3 billion tonnes of food is wasted globally each year. Food has and always will be the first and foremost primary necessity of the living world. At Food ResQ, we realize the importance of each grain and wish to do our part in reducing food-wastage and in-turn eliminating the world's hunger bit by bit.
