@@ -27,12 +27,12 @@ fetch('https://tamuhack21.herokuapp.com/utility/user/profile', {
             <div class="row" style="margin-top:30px;">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <ul type="none" style="text-align: center;  border: 2px solid black;">`
+                    <ul type="none" style="text-align: center;">`
 
 
 
             ele[0].FOOD.forEach(e => {
-                content = content + `<li>${e.NAME} ----> ${e.WEIGHT}</li>`
+                content = content + `<li>${e.NAME} - ${e.WEIGHT} kg</li>`
             })
 
   
