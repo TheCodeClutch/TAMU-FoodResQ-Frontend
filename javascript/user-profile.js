@@ -23,8 +23,8 @@ fetch('https://tamuhack21.herokuapp.com/utility/user/profile', {
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
                     <div class="row" style="text-align: center;">
-                        <div class="col-6">${ele[0].DATE}</div>
-                        <div class="col-6">${ele[0].TIME_OPEN} to ${ele[0].TIME_CLOSE}</div>
+                        <div class="col-6"  style="font-size: 20px;">Date of posting: ${ele[0].DATE}</div>
+                        <div class="col-6"  style="font-size: 20px;">Time of posting: ${ele[0].TIME_OPEN} to ${ele[0].TIME_CLOSE}</div>
                     </div>
                 </div>
                 <div class="col-2"></div>
@@ -37,7 +37,7 @@ fetch('https://tamuhack21.herokuapp.com/utility/user/profile', {
 
 
             ele[0].FOOD.forEach(e => {
-                content = content + `<li>${e.NAME} - ${e.WEIGHT} kg</li>`
+                content = content + `<li style="font-weight: bolder; font-size: 25px; text-align: center;">${e.NAME} - ${e.WEIGHT} kg</li>`
             })
 
   
