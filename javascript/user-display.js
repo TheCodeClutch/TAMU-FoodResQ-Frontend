@@ -35,6 +35,11 @@ function booking(event){
   .then(res => res.json())
   .then(res => {
       console.log(res)
+      Swal.fire({
+        icon: "success",
+        title: "Yayy",
+        text: "Slot successfully booked! :)",
+      })
   })
   .catch(err => {
     console.log(err)
@@ -59,6 +64,11 @@ function bookingGreen(event){
   .then(res => res.json())
   .then(res => {
       console.log(res)
+      Swal.fire({
+        icon: "success",
+        title: "Yayy",
+        text: "Slot successfully booked! :)",
+      })
   })
   .catch(err => {
     console.log(err)
