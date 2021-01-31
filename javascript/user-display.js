@@ -283,27 +283,28 @@ window.onload = () => {
       globalMarkers = [];
     }
 
-    let url = `https://tamuhack2021.herokuapp.com/table/filter/excessFood?`;
+    let url = `https://tamuhack2021.herokuapp.com/table/filter/excessFood`;
     
     const state = document.getElementById('stateId').value
     const city = document.getElementById('cityId').value
     const country = document.getElementById('countryId').value
-
+    const obj = {}
     if(state){
-      url = url + `state=${state}`
+      obj.state = state
     }
     if(city){
-      url = url + `&city=${city}`
+      obj.city = city
     }
     if(country){
-      url = url + `&country=${country}`
+      obj.country = country
     }
     fetch(url, {
-      method: "GET",
+      method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "content-type": "application/json",
         Authorization: token,
       },
+      body: JSON.stringify(obj)
     })
       .then(res => res.json())
       .then(res => {
@@ -348,7 +349,7 @@ window.onload = () => {
                 <td>${ele.TIME_OPEN} to ${ele.TIME_CLOSE}</td>
                 <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#address${ele.ID}">View address</button></td>
                 <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#food${ele.ID}">View food content</button></td>
-                <td><button data-id=${ele.ID} class="btn btn-primary">Book slot</button></td>
+                <td><button onclick="booking(event)" data-id=${ele.ID} data-email=${ele.EMAIL} class="btn btn-primary">Book slot</button></td>
               </tr>`;
   
               // Food modal
@@ -414,25 +415,27 @@ window.onload = () => {
 
 
 
-      let urlTwo = `https://tamuhack2021.herokuapp.com/table/filter/greenFood?`;
-  
+      let urlTwo = `https://tamuhack2021.herokuapp.com/table/filter/greenFood`;
+      
+      const objTwo = {}
   
       if(state){
-        urlTwo = urlTwo + `state=${state}`
+        objTwo.state = state
       }
       if(city){
-        urlTwo = urlTwo + `&city=${city}`
+        objTwo.city = city
       }
       if(country){
-        urlTwo = urlTwo + `&country=${country}`
+        objTwo.country = country
       }
       document.getElementById('filter-btn').value = "Please wait...."
       fetch(urlTwo, {
-        method: "GET",
+        method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "content-type": "application/json",
           Authorization: token,
         },
+        body: JSON.stringify(objTwo)
       })
         .then((response) => response.json())
         .then((res) => {
@@ -478,7 +481,7 @@ window.onload = () => {
                   <td>${ele.TIME_OPEN} to ${ele.TIME_CLOSE}</td>
                   <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#address${ele.ID}">View address</button></td>
                   <td>${ele.WEIGHT}</td>
-                  <td><button data-id=${ele.ID} class="btn btn-primary">Book slot</button></td>
+                  <td><button onclick="bookingGreen(event)" data-id=${ele.ID} data-email=${ele.EMAIL} class="btn btn-primary">Book slot</button></td>
                 </tr>`;
     
           
@@ -512,11 +515,7 @@ window.onload = () => {
           }
         })
         .catch((err) => {
-          Swal.fire({
-            icon: "error",
-            title: "Oops..",
-            text: "There was some error from our side!",
-          });
+          console.log(err)
         });
   })
 };
