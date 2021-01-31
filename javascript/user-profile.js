@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const email = urlParams.get('email');
+const email = urlParams.get('q');
 
 fetch('https://tamuhack21.herokuapp.com/utility/user/profile', {
     method: 'POST',
