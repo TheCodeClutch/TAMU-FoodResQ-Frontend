@@ -47,24 +47,29 @@ fetch('https://tamuhack21.herokuapp.com/utility/restaurant/profile', {
                content = content +      `</ul>
                 </div>
                 <div class="col-2"></div>
-            </div>
+            </div>`
+            if(ele.BOOKED){
+                content = content + `<div class="row text-center">
+                <div class="col-12 my-4">
+                    <h5>User Details</h5>
+                </div>
+                <div class="col-12">
+                    <b>Name</b> : ${ele.BOOKED_BY_NAME} <br>
+                    <b>Phone</b>: ${ele.BOOKED_BY_PHONE} <br>
+                    <b>Email</b>: ${ele.BOOKED_BY_EMAIL}
+                </div>
+            </div>`
+            } else {
+                content = content + `<p>Not yet booked</p>`
+            }
 
 
-                    <div class="row text-center">
-                        <div class="col-12 my-4">
-                            <h5>User Details</h5>
-                        </div>
-                        <div class="col-12">
-                            <b>Name</b> : ${ele.BOOKED_BY_NAME} <br>
-                            <b>Phone</b>: ${ele.BOOKED_BY_PHONE} <br>
-                            <b>Email</b>: ${ele.BOOKED_BY_EMAIL}
-                        </div>
-                    </div>
+
         
         
         
         
-                    <div class="row text-center" style="margin-top: 50px;">
+                    content = content + `<div class="row text-center" style="margin-top: 50px;">
                         <div class="col-12" style="padding-bottom:30px;">
                             <h5>Did the user bought what he made the request for?</h5>
                         </div>
