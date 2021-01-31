@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const email = urlParams.get('q');
 
-fetch('https://tamuhack21.herokuapp.com/utility/user/profile', {
+fetch('https://resq-303417.appspot.com/utility/user/profile', {
     method: 'POST',
     headers: {
         'Authorization': localStorage.getItem('token'),

@@ -97,7 +97,7 @@ document.getElementById("food-modal-submit").addEventListener('click', () => {
         return false;
     } else {
         document.getElementById("food-modal-submit").innerHTML = "Please wait...";
-        fetch('https://tamuhack21.herokuapp.com/add/excessFood', {
+        fetch('https://resq-303417.appspot.com/add/excessFood', {
             method: "POST",
             headers: new Headers({
                 'Authorization': localStorage.getItem('token'),
@@ -173,7 +173,7 @@ document.getElementById('greenfood-modal-submit').addEventListener('click', () =
         return false;
     } else {
         document.getElementById("greenfood-modal-submit").innerHTML = "Please wait...";
-        fetch('https://tamuhack21.herokuapp.com/add/greenFood', {
+        fetch('https://resq-303417.appspot.com/add/greenFood', {
             method: "POST",
             headers: new Headers({
                 'Authorization': localStorage.getItem('token'),

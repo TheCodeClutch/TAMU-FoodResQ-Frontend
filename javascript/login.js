@@ -37,7 +37,7 @@ window.onload = () => {
             
             document.getElementById("rest-btn").value = "Loading...";
 
-            fetch("https://tamuhack21.herokuapp.com/auth/login/restaurant", {
+            fetch("https://resq-303417.appspot.com/auth/login/restaurant", {
                 method: "POST",
                 headers: new Headers({ "content-type": "application/json" }),
                 body: JSON.stringify({
@@ -138,7 +138,7 @@ window.onload = () => {
             
             document.getElementById("user-btn").value = "Loading...";
 
-            fetch("https://tamuhack21.herokuapp.com/auth/login/user", {
+            fetch("https://resq-303417.appspot.com/auth/login/user", {
                 method: "POST",
                 headers: new Headers({ "content-type": "application/json" }),
                 body: JSON.stringify({

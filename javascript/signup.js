@@ -111,7 +111,7 @@ window.onload = function () {
                 state: state,
                 country: country,
             })
-            fetch("https://tamuhack21.herokuapp.com/auth/signup/restaurant", {
+            fetch("https://resq-303417.appspot.com/auth/signup/restaurant", {
                 method: "POST",
                 headers: new Headers({ "content-type": "application/json" }),
                 body: JSON.stringify({
@@ -294,7 +294,7 @@ window.onload = function () {
             document.getElementById("user-btn").value = "Please wait...";
 
 
-            fetch("https://tamuhack21.herokuapp.com/auth/signup/user", {
+            fetch("https://resq-303417.appspot.com/auth/signup/user", {
                 method: "POST",
                 body: formData,
             })
