@@ -1,10 +1,15 @@
+const urlParams = new URLSearchParams(window.location.search);
+const email = urlParams.get('q');
+
 fetch('https://tamuhack21.herokuapp.com/utility/user/profile', {
     method: 'POST',
     headers: {
         'Authorization': localStorage.getItem('token'),
         'content-type': 'application/json'
     },
-    body: JSON.stringify({})
+    body: JSON.stringify({
+        email
+    })
 })
 .then(res => res.json())
 .then(res => {
