@@ -20,8 +20,8 @@ fetch('https://tamuhack21.herokuapp.com/utility/restaurant/profile', {
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
                     <div class="row" style="text-align: center;">
-                        <div class="col-6">${ele.DATE}</div>
-                        <div class="col-6">${ele.TIME_OPEN} to ${ele.TIME_CLOSE}</div>
+                        <div class="col-6" style="font-size: 20px;">Date of posting: ${ele.DATE}</div>
+                        <div class="col-6"  style="font-size: 20px;">Time of posting: ${ele.TIME_OPEN} to ${ele.TIME_CLOSE}</div>
                     </div>
                 </div>
                 <div class="col-2"></div>
@@ -34,7 +34,7 @@ fetch('https://tamuhack21.herokuapp.com/utility/restaurant/profile', {
 
 
             ele.FOOD.forEach(e => {
-                content = content + `<li>${e.NAME} - ${e.WEIGHT} kg</li>`
+                content = content + `<li style="font-weight: bolder; font-size: 25px; text-align: center;">${e.NAME} - ${e.WEIGHT} kg</li>`
             })
 
   
@@ -91,8 +91,8 @@ fetch('https://tamuhack21.herokuapp.com/utility/restaurant/profile', {
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
                     <div class="row" style="text-align: center;">
-                        <div class="col-6">${ele.DATE}</div>
-                        <div class="col-6">${ele.TIME_OPEN} to ${ele.TIME_CLOSE}</div>
+                        <div class="col-6"  style="font-size: 20px;">Date of posting: ${ele.DATE}</div>
+                        <div class="col-6"  style="font-size: 20px;">Time of posting: ${ele.TIME_OPEN} to ${ele.TIME_CLOSE}</div>
                     </div>
                 </div>
                 <div class="col-2"></div>
@@ -100,7 +100,7 @@ fetch('https://tamuhack21.herokuapp.com/utility/restaurant/profile', {
             <div class="row" style="margin-top:30px;">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <ul type="none" style="text-align: center;">${ele.WEIGHT} kg of Green material</ul>
+                    <ul type="none" style="text-align: center; font-weight: bolder; font-size: 25px;">${ele.WEIGHT} kg of Green material</ul>
                 </div>
                 <div class="col-2"></div>
             </div>`
