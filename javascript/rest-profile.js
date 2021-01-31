@@ -60,7 +60,7 @@ fetch('https://tamuhack21.herokuapp.com/utility/restaurant/profile', {
                 </div>
             </div>`
             } else {
-                content = content + `<p>Not yet booked</p>`
+                content = content + `<p style="text-align: center;">Not yet booked!</p>`
             }
 
 
