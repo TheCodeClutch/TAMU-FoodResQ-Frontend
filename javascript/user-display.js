@@ -20,7 +20,7 @@ var ui = H.ui.UI.createDefault(map, defaultLayers);
 function booking(event){
   console.log(event.target.getAttribute('data-id'))
   console.log(event.target.getAttribute('data-email'))
-  fetch('https://tamuahack21.herokuapp.com/table/book', {
+  fetch('https://tamuhack21.herokuapp.com/table/book', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
